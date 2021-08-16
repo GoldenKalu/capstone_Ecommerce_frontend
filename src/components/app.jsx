@@ -1,6 +1,9 @@
 import React from "react";
+import { Switch, Route } from "react-router-dom";
+import * as ROUTES from "../constants/routes";
 import NavBar from "./NavBar/navBar";
 import Title from "./Title/title";
+import Login from "./Login/login";
 
 
 export default function App() {
@@ -8,6 +11,9 @@ export default function App() {
       <div className="App">
         <Title />
         <NavBar />
+        <Switch>
+          <Route path={ROUTES.LOGIN} exact component={Login} />
+      </Switch>
       </div>
     );
-  }
+    }

@@ -70,7 +70,7 @@ return (
                   <div className="form-group">
                     {" "}
                     <label className="form-control-label text-muted">
-                      Password
+                      password
                     </label>{" "}
                     <input
                       type="password"

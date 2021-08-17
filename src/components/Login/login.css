@@ -86,7 +86,7 @@ button:focus {
 
 .btn-color {
     border-radius: 50px;
-    color: #fff;
+    color: rgb(95, 134, 167);
     background-image: linear-gradient(to right, #FFD54F, #8098ad);
     padding: 15px;
     cursor: pointer;

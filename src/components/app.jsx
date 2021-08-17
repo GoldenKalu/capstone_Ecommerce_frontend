@@ -5,6 +5,7 @@ import NavBar from "./NavBar/navBar";
 import Title from "./Title/title";
 import Login from "./Login/login";
 import Register from "./Register/register";
+import "../components/app.css";
 
 
 export default function App() {

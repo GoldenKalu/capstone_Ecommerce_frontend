@@ -4,6 +4,7 @@ import * as ROUTES from "../constants/routes";
 import NavBar from "./NavBar/navBar";
 import Title from "./Title/title";
 import Login from "./Login/login";
+import Register from "./Register/register";
 
 
 export default function App() {
@@ -13,6 +14,7 @@ export default function App() {
         <NavBar />
         <Switch>
           <Route path={ROUTES.LOGIN} exact component={Login} />
+          <Route path={ROUTES.REGISTER} component={Register} />
       </Switch>
       </div>
     );

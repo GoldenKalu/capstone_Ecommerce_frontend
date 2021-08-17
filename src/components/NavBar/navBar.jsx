@@ -7,9 +7,9 @@ const NavBar = ({ user }) => {
       <div>
         {user && <h4>Welcome {user.username}</h4>}
         <ul>
-          {/* <li>
+          <li>
             <Link to={ROUTES.HOME}>Logout</Link>
-          </li> */}
+          </li>
         
           {!user && (
             <React.Fragment>

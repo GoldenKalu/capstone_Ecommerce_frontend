@@ -14,7 +14,7 @@ const Register = (props) => {
     let specificUser;
 
     useEffect(() => {
-        document.title = "Register - Glamazon";
+        document.title = "Register - G Glam";
     }, []);
 
     const handleSubmit = async (event) => {

@@ -5,14 +5,6 @@ import App from "./components/app";
 import "bootstrap/dist/css/bootstrap.css"
 
 
-// ReactDOM.render(<App/>, document.getElementById('root'));
-
-
-// const jsxElement = <h1>Glamazon</h1>;
-// console.log(jsxElement);
-
-// ReactDOM.render(jsxElement, document.getElementById('root'));
-
 ReactDOM.render(
     <Router>
         <React.StrictMode>

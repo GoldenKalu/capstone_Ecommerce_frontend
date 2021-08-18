@@ -5,6 +5,7 @@ import NavBar from "./NavBar/navBar";
 import Title from "./Title/title";
 import Login from "./Login/login";
 import Register from "./Register/register";
+import Home from "./Home/home";
 import "../components/app.css";
 import StarRating from "./StarRating/star-rating";
 
@@ -14,11 +15,13 @@ export default function App() {
       <div className="App">
         <Title />
         <NavBar />
+        <Home />
         <Switch>
           <Route path={ROUTES.LOGIN} exact component={Login} />
-          <Route path={ROUTES.REGISTER} exact component={Register} />
-          <Route path={ROUTES.StarRATINGS} component={StarRating} />
-      </Switch>
+          <Route path={ROUTES.HOME} exact component={Home} />
+          <Route path={ROUTES.REGISTER} component={Register} />
+          <Route path={ROUTES.StarRATING} component={StarRating} />
+        </Switch>
       </div>
     );
     }

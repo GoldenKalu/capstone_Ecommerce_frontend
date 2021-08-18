@@ -6,7 +6,7 @@ function Title(props) {
     <div className="row row-spacer barcolor">
       <div className="col-align" style={{ padding: 0 }}>
         <div className="title-nav">
-          <h1>G Glam</h1>
+          <h1>Nouveau shop</h1>
         </div>
       </div>
     </div>

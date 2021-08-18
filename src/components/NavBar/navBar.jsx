@@ -17,6 +17,9 @@ const NavBar = ({ user }) => {
                 <Link to={ROUTES.REGISTER}>Register</Link>
               </li>
               <li>
+                <Link to={ROUTES.StarRATING}>StarRating</Link>
+              </li>
+              <li>
                 <Link to={ROUTES.LOGIN}>Login</Link>
               </li>
             </React.Fragment>

@@ -14,7 +14,7 @@ const Register = (props) => {
     let specificUser;
 
     useEffect(() => {
-        document.title = "Register - G Glam";
+        document.title = "Register - Nouveau shop";
     }, []);
 
     const handleSubmit = async (event) => {
@@ -30,7 +30,7 @@ const Register = (props) => {
         };
 
         await axios.post(
-            "http://localhost:3001/api/collections/user",
+            "http://localhost:3001/api/collections",
                 // headers: { "x-auth-token": jwt },
             loginInfo
         );

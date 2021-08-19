@@ -17,7 +17,7 @@ const NavBar = ({ user }) => {
                 <Link to={ROUTES.REGISTER}>Register</Link>
               </li>
               <li>
-                <Link to={ROUTES.StarRATING}>StarRating</Link>
+                <Link to={ROUTES.StARRATING}>StarRating</Link>
               </li>
               <li>
                 <Link to={ROUTES.LOGIN}>Login</Link>

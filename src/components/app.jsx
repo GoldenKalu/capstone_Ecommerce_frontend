@@ -1,13 +1,15 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import * as ROUTES from "../constants/routes";
+// import ROUTES from "../constants/routes";
 import NavBar from "./NavBar/navBar";
 import Title from "./Title/title";
 import Login from "./Login/login";
 import Register from "./Register/register";
 import Home from "./Home/home";
+// import Products from "./Pages/Products/products";
 import "../components/app.css";
-import StarRating from "./StarRating/star-rating";
+import StarRating from "../Pages/StarRating/star-rating";
+
 
 
 export default function App() {
@@ -15,13 +17,14 @@ export default function App() {
       <div className="App">
         <Title />
         <NavBar />
-        <Home />
         <Switch>
-          <Route path={ROUTES.LOGIN} exact component={Login} />
-          <Route path={ROUTES.HOME} exact component={Home} />
-          <Route path={ROUTES.REGISTER} component={Register} />
-          <Route path={ROUTES.StarRATING} component={StarRating} />
+         <Route exact path="/" component={Home} />
+          <Route path="/login" component={Login} />
+          <Route path="/register" component={Register} />
+          {/* <Route path="/products" component={Products} /> */}
+          <Route path="/StarRating" component={StarRating} />
         </Switch>
       </div>
     );
-    }
+  };
+    

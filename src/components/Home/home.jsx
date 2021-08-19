@@ -1,16 +1,8 @@
+import React from "react";
+import "./home.css";
 
-// import { useHistory } from "react-router-dom";
-// import * as ROUTES from "../../constants/routes";
-// import "../Home/home.css";
+function Home (props) {
+    return <div>Home</div>
+}
 
-// const Home = () => {
-//     const history = useHistory();
-  
-//     const onClick = () => {
-//       localStorage.clear();
-//       history.push(ROUTES.LOGIN);
-//     };
-
-
-
-// export default Home;
+export default Home;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import * as ROUTES from "../../constants/routes";
+// import * as ROUTES from "../../constants/routes";
 import "./star-rating.css";
 
 class StarRating extends Component {

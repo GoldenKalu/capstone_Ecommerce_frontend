@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { useHistory } from "react-router-dom";
-import * as ROUTES from "../../constants/routes";
+//import { useHistory } from "react-router-dom";
+//import * as ROUTES from "../../constants/routes";
 import axios from "axios";
 import "../Register/register.css";
 
@@ -10,12 +10,12 @@ const Register = (props) => {
     const [username, setUserName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const history = useHistory("/profile");
+    //const history = useHistory("/profile");
     let specificUser;
 
-    useEffect(() => {
+   /*  useEffect(() => {
         document.title = "Register - Nouveau shop";
-    }, []);
+    }, []); */
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -38,7 +38,7 @@ const Register = (props) => {
         alert(
             "You have successfully registered your account! Please Click 'OK' to continue to login page."
         );
-        history.push(ROUTES.LOGIN);
+        //history.push(ROUTES.LOGIN);
       } catch {
         localStorage.removeItem(specificUser);
         console.log("HandleSubmit has failed");
@@ -47,7 +47,13 @@ const Register = (props) => {
 
     return (
         <div class="container">
-	        <div class="row" />
+            <h1>Hey Golden!</h1>
+            <form>
+                <input type="text" name="username" />
+                <input type="text" lname="Last name" />
+            </form>
+               
+	       {/*  <div class="row" />
                 <div class="col-md-6" />
                     <form action="" method="post" id="fileForm" role="form" />
                         <fieldset /><legend class="text-center">Valid information is required to register. <span class="req"><small> required *</small></span></legend>
@@ -143,7 +149,7 @@ const Register = (props) => {
                 <input class="btn btn-success" type="submit" name="submit_reg" value="Register" />
             <div />
                       <h5>You will receive an email to complete the registration and validation process. </h5>
-                      <h5>Be sure to check your spam folders. </h5>
+                      <h5>Be sure to check your spam folders. </h5> */}
         </div>
       
 

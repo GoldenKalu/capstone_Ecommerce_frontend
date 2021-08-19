@@ -11,6 +11,23 @@ import "../components/app.css";
 import StarRating from "../Pages/StarRating/star-rating";
 
 
+// class App extends Component {
+//   constructor(props) {
+//     super(props);
+
+//     this.state = {
+//       products: {},
+//       productId: ''
+       
+//     }
+
+//     this.handleChange= this.handleChange.bind(this);
+//     this.handleSubmit= this.handleSubmit.bind(this);
+//   }
+
+//   hamdleChange(event)
+// }
+
 
 export default function App() {
     return (

@@ -30,7 +30,7 @@ const Register = (props) => {
         };
 
         await axios.post(
-            "http://localhost:3001/api/collections",
+            "http://localhost:3001/api/collections/register",
                 // headers: { "x-auth-token": jwt },
             loginInfo
         );

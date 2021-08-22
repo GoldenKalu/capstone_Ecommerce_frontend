@@ -21,7 +21,7 @@ const Login = () => {
   
     const fetchAllUsers = async (event) => {
       await axios
-        .get("http://localhost:3001/api/collections/user")
+        .get("http://localhost:3001/api/auth/Login/")
         .then((response) => {
           setUserData(response.data);
         });

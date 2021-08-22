@@ -6,3 +6,10 @@ function Products (props) {
 }
 
 export default Products;
+
+// export default function Products (props) {
+//     console.log(props)
+
+
+
+// }

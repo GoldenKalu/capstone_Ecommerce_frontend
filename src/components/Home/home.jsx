@@ -1,14 +1,34 @@
 import React from "react";
 import "./home.css";
+// import NavBar from "../NavBar/navBar";
 
 function Home (props) {
-    return <div>Home</div>
-    // <div ClassName="background">
-    //     <img
-    //     src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
-    //     alt=""
-    //     />
-    // </div>
+    return (
+
+        <div className="text-center bg-image ">
+        <div className="mask">
+          <div className="d-flex justify-content-center align-items-center h-100">
+            <div className="text-white">
+              <h2 id="text" className="text">Welcome to Noveau shop, your one stop shop for all your Running and hiking needs</h2>
+              <h4 id="text" className="text">If you're a new customer here is a 10% off code to say thank you for shopping with us. first-time10
+              We hope to see you again.</h4>
+              <a type="button" className="btn btn-primary " href="/products" >Products</a>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+
+
+
+
+
+
+    // <div>Home</div>
+
+    
+    
+    )
 }
 
 export default Home;

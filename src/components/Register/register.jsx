@@ -3,6 +3,108 @@ import React, { useState, useEffect } from "react";
 //import * as ROUTES from "../../constants/routes";
 import axios from "axios";
 import "../Register/register.css";
+import { Link } from 'react-router-dom';
+
+// import { useDispatch, useSelector } from 'react-redux'
+// import { toast } from 'react-toastify'
+
+
+// const Register = ({ history, location }) => {
+//     const [name, setName] = useState('')
+//     const [email, setEmail] = useState('')
+//     const [password, setPassword] = useState('')
+//     const [passwordConfirm, setPasswordConfirm] = useState('')
+  
+//     const redirect = location.search ? location.search.split('=')[1] : '/'
+  
+//     const dispatch = useDispatch()
+//     const userLogin = useSelector(state => state.userLogin)
+  
+//     const { loading, userInfo } = userLogin
+  
+//     useEffect(() => {
+//       window.scrollTo(0, 0)
+//       if (userInfo) {
+//         history.push(redirect)
+//       }
+//     }, [userInfo, history, redirect])
+  
+//     const submitHandler = e => {
+//       e.preventDefault()
+//       if (password !== passwordConfirm) {
+//         toast.error('Passwords do not match')
+//       } else if (name && email && password) {
+//         dispatch(register(name, email, password))
+//       } else {
+//         toast.error('Please fill all fields!')
+//       }
+//     }
+  
+//     return (
+//         <Container>
+//           <Top>
+//             <i className='fas fa-cogs'></i>
+//             <div>
+//               <h2>Get Started</h2>
+//               <p>Create a new account</p>
+//             </div>
+//           </Top>
+//           {loading && loading ? (
+//             <CustomLoader type='Oval' width={20} height={20} />
+//           ) : (
+//             <Form onSubmit={submitHandler}>
+//               <FormControl>
+//                 <label htmlFor=''>Name</label>
+//                 <input
+//                   type='text'
+//                   placeholder='Name'
+//                   value={name}
+//                   onChange={e => setName(e.target.value)}
+//                 />
+//               </FormControl>
+//               <FormControl>
+//                 <label htmlFor=''>Email</label>
+//                 <input
+//                   type='email'
+//                   placeholder='Enter Email'
+//                   value={email}
+//                   onChange={e => setEmail(e.target.value)}
+//                 />
+//               </FormControl>
+//               <FormControl>
+//                 <label htmlFor=''>Password</label>
+//                 <input
+//                   type='password'
+//                   placeholder='Password'
+//                   value={password}
+//                   onChange={e => setPassword(e.target.value)}
+//                 />
+//               </FormControl>
+  
+//               <FormControl>
+//                 <label htmlFor=''>Confirm Password</label>
+//                 <input
+//                   type='password'
+//                   placeholder='Confirm Password'
+//                   value={passwordConfirm}
+//                   onChange={e => setPasswordConfirm(e.target.value)}
+//                 />
+//               </FormControl>
+  
+//               <Button type='submit'>Signup Now</Button>
+//             </Form>
+//           )}
+  
+//           <Bottom>
+//             <i className='fas fa-question'></i>
+//             Existing user? <Link to='/login'>Login here</Link> instead.
+//           </Bottom>
+//         </Container>
+//     )
+//   }
+  
+//   export default Register;
+  
 
 const Register = (props) => {
     const [firstname, setFirstName] = useState("");
@@ -46,115 +148,120 @@ const Register = (props) => {
     };
 
     return (
-        <div class="container">
-            <h1>Hey Golden!</h1>
-            <form>
-                <input type="text" name="username" />
-                <input type="text" lname="Last name" />
-            </form>
-               
-	       {/*  <div class="row" />
-                <div class="col-md-6" />
-                    <form action="" method="post" id="fileForm" role="form" />
-                        <fieldset /><legend class="text-center">Valid information is required to register. <span class="req"><small> required *</small></span></legend>
-                        <form onSubmit={handleSubmit}>
+        <div className="login container px-4 py-5 mx-auto">
+          <div className="card card0"></div>
+          <div className="d-flex flex-lg-row flex-column-reverse">
+            <div className="card card1">
+              <div className="row justify-content-center my-auto">
+                <div className="col-md-8 col-10 my-5">
+                  <h3 className="mb-5 text-center heading">Noveau shop</h3>
+                  <h6 className="msg-info">Please Register to shop</h6>
+                  <form onSubmit={handleSubmit} method="POST">
+                  <div className="form-group">
+                      {" "}
+                      <label className="form-control-label text-muted">
+                        First Name
+                      </label>{" "}
+                      <input
+                        type="text"
+                        id="First Name"
+                        name="First Name"
+                        placeholder="First Name"
+                        className="form-control"
+                        onChange={({ target }) => setFirstName(target.value)}
+                      />
+                      </div>
 
-            <div class="form-group"> 	 
-                <label for="firstname"><span class="req">* </span> First name: </label>
-                    <input 
-                        class="form-control" 
-                        type="text" 
-                        name="firstname" 
-                        id = "txt" 
-                        onkeyup = "Validate(this)" 
-                        required onChange={({ target }) => setFirstName(target.value)}
-                    /> 
-                        <div id="errFirst"></div>    
-            </div>
+                      <div className="form-group">
+                      {" "}
+                      <label className="form-control-label text-muted">
+                        Last Name
+                      </label>{" "}
+                      <input
+                        type="text"
+                        id="Last Name"
+                        name="Last Name"
+                        placeholder="Last Name"
+                        className="form-control"
+                        onChange={({ target }) => setLastName(target.value)}
+                      />
+                      </div>
 
-            <div class="form-group">
-                <label for="lastname"><span class="req">* </span> Last name: </label> 
-                    <input 
-                        class="form-control" 
-                        type="text" 
-                        name="lastname" 
-                        id = "txt" 
-                        onkeyup = "Validate(this)" 
-                        placeholder="hyphen or single quote OK" 
-                        required onChange={({ target }) => setLastName(target.value)}
-                    />  
-                        <div id="errLast"></div>
-            </div>
-
-            <div class="form-group">
-                <label for="email"><span class="req">* </span> Email Address: </label> 
-                    <input 
-                        class="form-control" 
-                        required type="text" 
-                        name="email" 
-                        id = "email"  
-                        onchange="email_validate(this.value);" 
+                    <div className="form-group">
+                      {" "}
+                      <label className="form-control-label text-muted">
+                        Email
+                      </label>{" "}
+                      <input
+                        type="text"
+                        id="email"
+                        name="email"
+                        placeholder="Email"
+                        className="form-control"
                         onChange={({ target }) => setEmail(target.value)}
-                    />   
-                        <div class="status" id="status"></div>
+                      />
+                      <div className="form-group">
+                        {" "}
+                        <label className="form-control-label text-muted">
+                          password
+                        </label>{" "}
+                        <input
+                          type="password"
+                          id="psw"
+                          name="psw"
+                          placeholder="Password"
+                          className="form-control"
+                          onChange={({ target }) => setPassword(target.value)}
+                        />
+                        <div className="row justify-content-center my-3 px-3">
+                          <input
+                            className="btn-block btn-color"
+                            type="submit"
+                            value="Register"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                  
+                </div>
+                <div className="bottom text-center mb-5">
+                  <Link to='/Login'>
+                  <p href="#" className="sm-text mx-auto mb-3">
+                    Already have an account?
+                    <button className="btn btn-white ml-2">Login</button>
+                  </p>
+                  </Link>
+                  
+                  
+                </div>
+              </div>
+              <div className="card card2">
+                <div className="my-auto mx-md-5 px-md-5 right">
+                  {/* <h3 className="text-white">Welcome to Noveau shop</h3> <small className="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</small> */}
+                </div>
+              </div>
             </div>
-
-            <div class="form-group">
-                <label for="username"><span class="req">* </span> User name:  <small>This will be your login user name</small> </label> 
-                    <input 
-                        class="form-control" 
-                        type="text" name="username" 
-                        id = "txt" onkeyup = "Validate(this)" 
-                        placeholder="minimum 6 letters" 
-                        required 
-                        onChange={({ target }) => setUserName(target.value)}
-                    />  
-                        <div id="errLast"></div>
-            </div>
-
-            <div class="form-group">
-                <label for="password"><span class="req">* </span> Password: </label>
-                    <input 
-                        required name="password" 
-                        type="password" 
-                        class="form-control inputpass" 
-                        minlength="4" maxlength="16"  
-                        id="pass1" 
-                        onChange={({ target }) => setPassword(target.value)}
-                    />
-            </div>
-
-                <label for="password"><span class="req">* </span> Password Confirm: </label>
-                    <input 
-                        required name="password" 
-                        type="password" 
-                        class="form-control inputpass" minlength="4" 
-                        maxlength="16" 
-                        placeholder="Enter again to validate"  
-                        id="pass2" onkeyup="checkPass(); return false;" 
-                    />
-                        <span id="confirmMessage" class="confirmMessage"></span>
-            <div />
-            </form>
-
-            <div class="form-group" />
-                <input type="hidden" value="<?php //echo $date_entered; ?>" name="dateregistered" />
-                <input type="hidden" value="0" name="activate" />
-                <hr />
-
-                <input type="checkbox" required name="terms" onchange="this.setCustomValidity(validity.valueMissing ? 'Please indicate that you accept the Terms and Conditions' : '');" id="field_terms"> /</input>   <label for="terms">I agree with the <a href="terms.php" title="You may read our terms and conditions by clicking on this link">terms and conditions</a> for Registration.</label><span class="req">* </span>
-            <div />
-
-            <div class="form-group" />
-                <input class="btn btn-success" type="submit" name="submit_reg" value="Register" />
-            <div />
-                      <h5>You will receive an email to complete the registration and validation process. </h5>
-                      <h5>Be sure to check your spam folders. </h5> */}
+          </div>
         </div>
+      );
+    };
+    
+    export default Register;
+
+//     return (
+//         <div class="container">
+//             <h1>Hey Golden!</h1>
+//             <form>
+//                 <input type="text" name="username" />
+//                 <input type="text" lname="Last name" />
+//             </form>
+               
+	       
+//         </div>
       
 
-    );
-};
+//     );
+// };
 
 
-export default Register;

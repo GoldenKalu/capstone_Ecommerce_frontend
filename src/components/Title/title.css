@@ -82,7 +82,7 @@ h1 {
   height: 12px;
   padding: 10px;
   border: none;
-  width: 100%;
+  width: 80%;
 }
 
 .title_searchIcon {
@@ -100,13 +100,13 @@ h1 {
   font-weight: 800;
 }
 
-.title_optionBasket {
+.title__optionBasket {
   display: flex;
   align-items: center;
-  color: white;
+  color: rgb(24, 23, 23);
 }
 
-.title_basketCount {
+.title__SbasketCount {
   margin-left: 10px;
   margin-right: 10px;
 }

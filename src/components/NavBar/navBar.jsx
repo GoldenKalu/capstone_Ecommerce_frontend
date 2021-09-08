@@ -13,15 +13,18 @@ const NavBar = ({ user }) => {
         
           {!user && (
             <React.Fragment>
+              {/* <li>
+                <Link to={ROUTES.HOME}>Home</Link>
+              </li> */}
               <li>
                 <Link to={ROUTES.REGISTER}>Register</Link>
               </li>
               <li>
                 <Link to={ROUTES.PRODUCTS}>Products</Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to={ROUTES.StARRATING}>StarRating</Link>
-              </li>
+              </li> */}
               <li>
                 <Link to={ROUTES.LOGIN}>Login</Link>
               </li>

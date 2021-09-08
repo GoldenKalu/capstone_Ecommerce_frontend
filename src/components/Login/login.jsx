@@ -3,6 +3,8 @@ import { useHistory } from "react-router-dom";
 import * as ROUTES from "../../constants/routes";
 import axios from "axios";
 import "../Login/login.css";
+import { Link } from 'react-router-dom';
+
 
 const Login = () => {
     const [userData, setUserData] = useState([]);
@@ -92,10 +94,13 @@ return (
               </form>
             </div>
             <div className="bottom text-center mb-5">
+              <Link to='/Register'>
               <p href="#" className="sm-text mx-auto mb-3">
                 Don't have an account?
                 <button className="btn btn-white ml-2">Create new</button>
               </p>
+              </Link>
+              
             </div>
           </div>
           <div className="card card2">

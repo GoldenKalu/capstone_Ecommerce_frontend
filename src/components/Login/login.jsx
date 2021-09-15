@@ -23,7 +23,7 @@ const Login = () => {
   
     const fetchAllUsers = async (event) => {
       await axios
-        .get("http://localhost:3001/api/auth/Login/")
+        .get("http://localhost:3002/api/auth/Login/")
         .then((response) => {
           setUserData(response.data);
         });
@@ -92,6 +92,7 @@ return (
                   </div>
                 </div>
               </form>
+              <p>By signing in you agree to Nouveau Shop's terms and conditions.</p>
             </div>
             <div className="bottom text-center mb-5">
               <Link to='/Register'>

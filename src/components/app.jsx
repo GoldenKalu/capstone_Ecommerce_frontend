@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from "react";
 // import ROUTES from "../constants/routes";
-// import axios from 'axios';
 import jwt_decode from 'jwt-decode';
 import ReactDOM from 'react-dom';
 import {Switch, Route} from 'react-router-dom';
@@ -15,6 +14,13 @@ import "../components/app.css";
 import axios from "axios";
 import Checkout from "./Checkout";
 import Payment from "./Payment";
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
+import ProfilePage from './profile/profilePage';
+import PaymentSuccessful from "./PaymentSuccessful";
+
+
+const promise = loadStripe('pk_test_51JYzMjLTAOH9KAabKnmhUVEUS4Jsp2OiIXp2lxBoJCcTgg4OrQQjwU3qrpjAnmoOcPCCxVu1HLYeqo5pFgRb5Izi00IwzQc0Op');
 
 // import React, { Component } from "react";
 // import App from "./App";
@@ -40,7 +46,7 @@ const AppHooks = () => {
        
        
         const getUserData = async () => {
-           await axios.get(`http://localhost:3001/api/collections/users/${decoded._id}`)
+           await axios.get(`http://localhost:3005/api/collections/user/${decoded._id}`)
            .then((value) => {
             setUser(value.data)
            console.log(value.data)
@@ -48,7 +54,7 @@ const AppHooks = () => {
        }
 
        const getProducts = async () => {
-           await axios.get(`http://localhost:3001/api/collections/products`)
+           await axios.get(`http://localhost:3005/api/products`)
            .then((value) => {
             setProducts(value.data)
             console.log(value.data, 'this is products')
@@ -61,6 +67,8 @@ const AppHooks = () => {
        }, [])
 
   
+       
+    
 
     
         return (
@@ -72,16 +80,23 @@ const AppHooks = () => {
              <Route exact path="/home" component={Home} />
               <Route path="/login" component={Login} />
               <Route path="/register" component={Register} />
+              <Route path="/profile" component={ProfilePage} />
               <Route path="/products" component={Products} />
+
               <Route path="/checkout" component={Checkout} />
               <Route path="/payment">
-                <Payment />
-                {/* <h1> Payment route</h1> */}
+              <Elements stripe={promise}>
+              <Payment />
+              </Elements>
+                
                 </Route>
+                <Route path="/PaymentSuccessful" component={PaymentSuccessful} >
+                  {Home}
+                  </Route>
+
 
                 
     
-              {/* <Route path="/StarRating" component={StarRating} /> */}
             </Switch>
           </div>
         );

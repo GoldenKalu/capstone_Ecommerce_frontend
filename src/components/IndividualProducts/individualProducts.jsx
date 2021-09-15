@@ -43,7 +43,7 @@ export default function IndividualProduct({products, total,user}) {
     return (
         <>
 
-                    <div>
+    <div>
                     <Products
                     id='12345'
                     title='Nike mens'
@@ -55,7 +55,12 @@ export default function IndividualProduct({products, total,user}) {
             
         <div className="sp-container">
             <a href="/products">Back to Products.</a>
-            
+            <div className="sp-card">
+                <div className="sp-container-fluid">
+                    <div className="wrapper-row">
+                        <div className="preview col-md-6">
+                            <div className="preview-pic">
+                            </div>
                             <div className="details ">
                                 <h3 className="product-name">{products.productsName} - ${products.productsPrice}</h3>
                             
@@ -66,12 +71,13 @@ export default function IndividualProduct({products, total,user}) {
 
                             </div>
                         </div>
-                  
-            
-        
+                    </div>
+                </div>
+            </div>  
+        </div>
 
 
-        
+        </>
     )
 
-
+}

@@ -33,7 +33,7 @@ function Home () {
                     price='60.00'
                     rating={2}
                     />
-
+                 
 
               </div>
               

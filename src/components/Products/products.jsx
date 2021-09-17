@@ -56,8 +56,15 @@ function Product({ id, title, image, price, rating}) {
             alt=""
             />
             <button onClick={addToBasket}>Add to Basket</button>
+            <Link to='/individualProducts'>
             <button onClick={IndividualProducts}>More info</button>
-            <Link to='/IndividualProducts'></Link>
+            </Link>
+            <input type="text"
+                  placeholder="Please leave a comment"
+                  className="form-control"
+                  />
+                  <button>Submit for review</button>
+          
 
 
             <div className="product__info">
@@ -81,7 +88,14 @@ function Product({ id, title, image, price, rating}) {
             alt=""
             />
             <button onClick={addToBasket}>Add to Basket</button>
+            <Link to='/individualProducts'>
             <button onClick={IndividualProducts}>More info</button>
+            </Link>
+            <input type="text"
+                  placeholder="Please leave a comment"
+                  className="form-control"
+                  />
+                  <button>Submit for review</button>
 
 
             <div className="product__info">
@@ -105,7 +119,15 @@ function Product({ id, title, image, price, rating}) {
             alt=""
             />
             <button onClick={addToBasket}>Add to Basket</button>
+            <Link to='/individualProducts'>
             <button onClick={IndividualProducts}>More info</button>
+            </Link>
+            <input type="text"
+                  placeholder="Please leave a comment"
+                  className="form-control"
+                  />
+                  <button>Submit for review</button>
+           
 
             {/* <button onClick={moreinfo}>Add to Basket</button> */}
 

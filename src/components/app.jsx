@@ -81,7 +81,7 @@ const AppHooks = () => {
              <Route exact path="/home" component={Home} />
               <Route path="/login" component={Login} />
               <Route path="/register" component={Register} />
-              <Route path="/profile" component={ProfilePage} />
+              {/* <Route path="/profile" component={ProfilePage} /> */}
               <Route path="/products" component={Products} />
               <Route path="/individualProducts" component={IndividualProducts} />
 
@@ -95,6 +95,8 @@ const AppHooks = () => {
                 <Route path="/PaymentSuccessful" component={PaymentSuccessful} >
                   {Home}
                   </Route>
+                  
+
 
 
                 

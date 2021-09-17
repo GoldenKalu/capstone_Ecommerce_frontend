@@ -20,6 +20,9 @@ const NavBar = ({ user }) => {
                 <Link to={ROUTES.REGISTER}>Register</Link>
               </li>
               <li>
+                <Link to={ROUTES.HOME}>Home</Link>
+              </li>
+              <li>
                 <Link to={ROUTES.PRODUCTS}>Products</Link>
               </li>
               {/* <li>

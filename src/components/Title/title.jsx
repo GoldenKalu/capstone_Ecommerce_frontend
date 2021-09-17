@@ -4,6 +4,8 @@ import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import { Link } from 'react-router-dom';
 import { useStateValue } from "../StateProvider";
+import Products from "../Products/products"
+
 
 
 function Title() {
@@ -18,10 +20,15 @@ function Title() {
           {/* <link to="/"></link> */}
           <p>Nouveau shop</p>
 
-
+        
           <input className="title_searchInput"
-          type="text" />
-          <SearchIcon className="title_SearchIcon" />
+          type="text"
+          placeholder="Search"
+           />
+          <Link to="/Products">
+            <button>Search</button> 
+            </Link>
+          {/* <SearchIcon className="title_SearchIcon" /> */}
 
           <div className="title_nav">
             <Link to='/Login'>

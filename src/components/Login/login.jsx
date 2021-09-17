@@ -83,11 +83,15 @@ return (
                       onChange={({ target }) => setPassword(target.value)}
                     />
                     <div className="row justify-content-center my-3 px-3">
-                      <input
+                      <Link to ='/Home'>
+                        <button className="btn-block btn-color">Login</button>
+                        {/* <button>Login</button> */}
+                      </Link>
+                      {/* <input
                         className="btn-block btn-color"
                         type="submit"
                         value="Login"
-                      />
+                      /> */}
                     </div>
                   </div>
                 </div>

@@ -1,8 +1,10 @@
 import React from 'react';
-import IndividualProduct from '../IndividualProducts/individualProducts';
+import IndividualProducts from '../IndividualProducts/individualProducts';
 import { useStateValue } from '../StateProvider';
 import "./products.css"; 
 import productImage from './productX.jpg'
+import { Link } from 'react-router-dom';
+
 
 
 
@@ -54,7 +56,8 @@ function Product({ id, title, image, price, rating}) {
             alt=""
             />
             <button onClick={addToBasket}>Add to Basket</button>
-            <button onClick={IndividualProduct}>More info</button>
+            <button onClick={IndividualProducts}>More info</button>
+            <Link to='/IndividualProducts'></Link>
 
 
             <div className="product__info">
@@ -78,7 +81,7 @@ function Product({ id, title, image, price, rating}) {
             alt=""
             />
             <button onClick={addToBasket}>Add to Basket</button>
-            <button onClick={IndividualProduct}>More info</button>
+            <button onClick={IndividualProducts}>More info</button>
 
 
             <div className="product__info">
@@ -102,7 +105,7 @@ function Product({ id, title, image, price, rating}) {
             alt=""
             />
             <button onClick={addToBasket}>Add to Basket</button>
-            <button onClick={IndividualProduct}>More info</button>
+            <button onClick={IndividualProducts}>More info</button>
 
             {/* <button onClick={moreinfo}>Add to Basket</button> */}
 

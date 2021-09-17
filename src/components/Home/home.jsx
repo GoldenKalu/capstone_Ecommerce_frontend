@@ -34,6 +34,7 @@ function Home () {
                     rating={2}
                     />
 
+
               </div>
               
                     

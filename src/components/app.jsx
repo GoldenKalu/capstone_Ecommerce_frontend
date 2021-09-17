@@ -18,6 +18,7 @@ import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 import ProfilePage from './profile/profilePage';
 import PaymentSuccessful from "./PaymentSuccessful";
+import IndividualProducts from "./IndividualProducts/individualProducts";
 
 
 const promise = loadStripe('pk_test_51JYzMjLTAOH9KAabKnmhUVEUS4Jsp2OiIXp2lxBoJCcTgg4OrQQjwU3qrpjAnmoOcPCCxVu1HLYeqo5pFgRb5Izi00IwzQc0Op');
@@ -82,6 +83,7 @@ const AppHooks = () => {
               <Route path="/register" component={Register} />
               <Route path="/profile" component={ProfilePage} />
               <Route path="/products" component={Products} />
+              <Route path="/individualProducts" component={IndividualProducts} />
 
               <Route path="/checkout" component={Checkout} />
               <Route path="/payment">
